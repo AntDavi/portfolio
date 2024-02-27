@@ -20,9 +20,9 @@ const Services = () => {
                 <div className="flex flex-col items-center justify-between xl:flex-row gap-y-12 xl:gap-y-24 xl:gap-x-8">
                     {SERVICES_DATA.map((item, index) => {
                         return (
-                            <Card className='w-cull max-w-[424px] h-[300px] flex flex-col pt-16 pb-10 justify-center items-center relative' key={index}>
+                            <Card className='w-full max-w-[424px] h-[300px] flex flex-col pt-16 pb-10 justify-center items-center relative rounded-2xl shadow-lg' key={index}>
                                 <CardHeader className='absolute text-primary -top-[60px]'>
-                                    <div className="w-[140px] h-[80px] dark:bg-background flex justify-center items-center">
+                                    <div className="w-[140px] h-[80px] dark:bg-background flex justify-center items-center rounded-2xl">
                                         {item.icon}
                                     </div>
                                 </CardHeader>

@@ -1,11 +1,14 @@
 'use client'
 
 import Link from 'next/link';
-import Image from 'next/image';
+
+
 import { TypeAnimation } from 'react-type-animation';
 
 import { Button } from '@/components/ui/button';
 import { Download, Send } from 'lucide-react';
+import { motion } from 'framer-motion';
+
 import {
     RiBriefcase4Fill,
     RiTeamFill,
@@ -56,7 +59,24 @@ const Hero = () => {
                             />
                         </div>
                         <h1 className='mb-4 h1'>
-                            Oi, sou Anthony 👋
+                            Oi, sou Anthony{' '}
+                            <motion.span
+                                style={{
+                                    display: "inline-block",
+                                    transformOrigin: "70% 70%",
+                                }}
+                                animate={{
+                                    rotate: [0, 14, -8, 14, -4, 10, 0],
+                                }}
+                                transition={{
+                                    duration: 5,
+                                    repeat: Infinity,
+                                    repeatType: "loop",
+                                    ease: "linear",
+                                }}
+                            >
+                                👋
+                            </motion.span>
                         </h1>
                         <p className='subtitle max-w-[520px] max-auto xl:mx-0'>
                             Como UX designer e programador frontend, busco criar experiências digitais impactantes, combinando design intuitivo com habilidades técnicas sólidas.
@@ -102,18 +122,25 @@ const Hero = () => {
                             badgeText='Clientes felizes'
                         /> */}
 
-                        <div className='bg-hero_shape2_light dark:hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2'>
-                        </div>
+                        <motion.div
+                            className='bg-hero_shape2_light dark:hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2'
+                            animate={{ rotate: 360 }} // Animação de rotação
+                            transition={{
+                                repeat: Infinity,
+                                duration: 20,
+                                ease: "linear",
+                            }} // Repetição infinita a cada 5 segundos
+                        ></motion.div>
+
                         <DevImg
                             containerStyle='bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom'
                             imgSrc='/hero/developer.png'
                         />
                     </div>
                 </div>
-                {/* Icon
                 <div className='absolute hidden md:flex left-2/4 bottom-10 mx:bottom-12 animate-bounce z-2'>
                     <RiArrowDownSLine className='text-3xl text-primary' />
-                </div> */}
+                </div>
             </div>
         </section>
     )

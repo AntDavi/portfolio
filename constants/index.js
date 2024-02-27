@@ -114,17 +114,17 @@ export const SERVICES_DATA = [
     {
         icon: <GanttChartSquare size={72} strokeWidth={0.8}/>,
         title: 'Web Development',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+        description: '“Se o seu negócio não estiver na Internet, o seu negócio ficará sem negócio” - Bill Gates'
     },
     {
         icon: <Blocks size={72} strokeWidth={0.8}/>,
         title: 'UX Desgin',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+        description: 'Buscando entender o usuário para criar a experiência mais valiosa possível.'
     },
     {
         icon: <Gem size={72} strokeWidth={0.8}/>,
         title: 'App Development',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+        description: 'Na palma da sua mão há um mundo, é um prazer expandir esse mundo.'
     }
 ]
 
