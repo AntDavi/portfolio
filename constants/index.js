@@ -65,22 +65,22 @@ export const SKILLS_DATA = [
         data: [
             {
                 title: 'figma',
-                imagePath: '/about/figma.svg',
+                imgPath: '/about/figma.svg',
                 description: 'O Figma é uma ferramenta de design colaborativo para criação de interfaces.'
             },
             {
                 title: 'vscode',
-                imagePath: '/about/vscode.svg',
+                imgPath: '/about/vscode.svg',
                 description: 'O VSCode é um editor de código leve extensível da Microsoft.'
             },
             {
                 title: 'javascript',
-                imagePath: '/about/javascript.svg',
+                imgPath: '/about/javascript.svg',
                 description: 'JavaScript é uma linguagem de programação para desenvolvimento web.'
             },
             {
                 title: 'notion',
-                imagePath: '/about/notion.svg',
+                imgPath: '/about/notion.svg',
                 description: 'O Notion é uma plataforma para organização de notas e projetos.'
             },
         ]
@@ -89,7 +89,7 @@ export const SKILLS_DATA = [
 
 export const QUALIFICATIONS_DATA = [
     {
-        title: 'educação',
+        title: 'education',
         data: [
             {
                 university: 'IFCE - CE',
@@ -99,7 +99,7 @@ export const QUALIFICATIONS_DATA = [
         ]
     },
     {
-        title: 'experiencia',
+        title: 'experience',
         data: [
             {
                 company: 'Freelancer',
@@ -128,27 +128,39 @@ export const SERVICES_DATA = [
     }
 ]
 
-export const WORKS_DATA = [
+export const PROJECTS_DATA = [
     {
-        image: '/work/2.png',
-        category: 'ux',
-        name: 'Nexa Website',
+        imgPath: '/work/2.png',
+        category: [
+            'link',
+            'ui',
+            'github'
+        ],
+        tag: 'frontdev',
+        title: 'Nexa Dashboard',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
         link: '/',
         repository: '/'
     },
     {
-        image: '/work/1.png',
-        category: 'web design',
-        name: 'Nexa Website',
+        imgPath: '/work/1.png',
+        category: [
+            'ui',
+        ],
+        tag: 'ui',
+        title: 'Nexa Website',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
         link: '/',
         repository: '/'
     },
     {
-        image: '/work/3.png',
-        category: 'ux',
-        name: 'Nexa Website',
+        imgPath: '/work/3.png',
+        category: [
+            'github',
+            'ui'
+        ],
+        tag: 'mobile',
+        title: 'Nexa App',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
         link: '/',
         repository: '/'
