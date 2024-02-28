@@ -20,7 +20,7 @@ const Reviews = () => {
     return (
         <section className='py-32'>
             <div className='container mx-auto'>
-                <h2 className="mx-auto mb-12 text-center section-title">Reviews</h2>
+                <h2 className="mx-auto mb-20 text-center section-title">Reviews</h2>
 
                 {/* slider */}
                 <Swiper
@@ -45,7 +45,7 @@ const Reviews = () => {
                             <SwiperSlide
                                 key={index}
                             >
-                                <Card className='p-8 bg-tertiary dark:bg-secondary/40 min-h-[300px]'>
+                                <Card className='p-8 bg-tertiary/20 dark:bg-secondary/40 min-h-[300px] shadow-lg'>
                                     <CardHeader className='p-0 mb-10'>
                                         <div className="flex items-center gap-x-4">
                                             {/* Image */}

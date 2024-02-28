@@ -22,7 +22,7 @@ const About = () => {
     return (
         <section className="xl:h-[860px] py-24">
             <div className="container mx-auto">
-                <h2 className="mx-auto mb-8 text-center section-title xl:mb-16">
+                <h2 className="mx-auto mb-20 text-center section-title xl:mb-16">
                     Sobre mim
                 </h2>
                 <div className="flex flex-col xl:flex-row">
@@ -33,7 +33,7 @@ const About = () => {
                     {/* Right */}
                     <div className="flex-1">
                         <Tabs defaultValue="personal">
-                            <TabsList className='grid w-full xl:grid-cols-3 xl:max-[520px] xl:border dark:border-none'>
+                            <TabsList className='grid max-w-[520px] mx-auto mb-24 xl:w-full xl:grid-cols-3 xl:border dark:border-none xl:mb-12'>
                                 <TabsTrigger className='w-[162px] xl:w-auto' value='personal'>Informações</TabsTrigger>
                                 <TabsTrigger className='w-[162px] xl:w-auto' value='qualifications'>Qualificações</TabsTrigger>
                                 <TabsTrigger className='w-[162px] xl:w-auto' value='skills'>Skills</TabsTrigger>

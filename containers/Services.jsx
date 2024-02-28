@@ -22,7 +22,7 @@ const Services = () => {
                         return (
                             <Card className='w-full max-w-[424px] h-[300px] flex flex-col pt-16 pb-10 justify-center items-center relative rounded-2xl shadow-lg' key={index}>
                                 <CardHeader className='absolute text-primary -top-[60px]'>
-                                    <div className="w-[140px] h-[80px] dark:bg-background flex justify-center items-center rounded-2xl">
+                                    <div className="w-[140px] h-[100px] dark:bg-background flex justify-center items-center rounded-2xl">
                                         {item.icon}
                                     </div>
                                 </CardHeader>

@@ -24,7 +24,7 @@ const MobileNav = () => {
                         <Social containerStyles='flex gap-x-4' iconsStyles='text-2xl' />
                         <Button>
                             <Link
-                                href='https://anthony-adm.vercel.app/'
+                                href='/studio'
                                 target='_blank'
                             >
                                 Login
