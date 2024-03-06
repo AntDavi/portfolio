@@ -15,6 +15,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules'
 import { REVIEW_DATA } from "@/constants"
 
+import { client } from "@/sanity/lib/client"
 
 const Reviews = () => {
     return (

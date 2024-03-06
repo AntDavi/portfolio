@@ -120,7 +120,7 @@ export const SERVICES_DATA = [
     {
         icon: <Blocks size={72} strokeWidth={0.8}/>,
         title: 'UX Desgin',
-        description: 'Buscando entender o usuário para criar a experiência mais valiosa possível.'
+        description: '"Um problema bem formulado, é um problema meio resolvido" - Charles Kettering'
     },
     {
         icon: <Gem size={72} strokeWidth={0.8}/>,
