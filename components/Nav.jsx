@@ -31,14 +31,14 @@ const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
                     </Link>
                 )
             })}
-            {/* <Button>
-        <Link
-          href='https://anthony-adm.vercel.app/'
-          target='_blank'
-        >
-          Login
-        </Link>
-      </Button> */}
+            <Button className="">
+                <Link
+                    href='/studio'
+                    target='_blank'
+                >
+                    Login
+                </Link>
+            </Button>
         </nav>
     )
 }

@@ -46,71 +46,6 @@ export const INFO_DATA = [
     },
 ]
 
-export const SKILLS_DATA = [
-    {
-        title: 'skills',
-        data: [
-            {
-                name: 'UI/UX'
-            },
-            {
-                name: 'FrontEnd Dev'
-            },
-            {
-                name: 'Motion'
-            },
-        ]
-    },
-    {
-        title: 'tools',
-        data: [
-            {
-                title: 'figma',
-                imgPath: '/about/figma.svg',
-                description: 'O Figma é uma ferramenta de design colaborativo para criação de interfaces.'
-            },
-            {
-                title: 'vscode',
-                imgPath: '/about/vscode.svg',
-                description: 'O VSCode é um editor de código leve extensível da Microsoft.'
-            },
-            {
-                title: 'javascript',
-                imgPath: '/about/javascript.svg',
-                description: 'JavaScript é uma linguagem de programação para desenvolvimento web.'
-            },
-            {
-                title: 'notion',
-                imgPath: '/about/notion.svg',
-                description: 'O Notion é uma plataforma para organização de notas e projetos.'
-            },
-        ]
-    }
-]
-
-export const QUALIFICATIONS_DATA = [
-    {
-        title: 'education',
-        data: [
-            {
-                university: 'IFCE - CE',
-                qualification: 'Bacharel em Engenharia da Computação',
-                years: '2019 - Em curso'
-            },
-        ]
-    },
-    {
-        title: 'experience',
-        data: [
-            {
-                company: 'Freelancer',
-                qualification: 'UX Desginer e FrontEnd-Dev',
-                years: '2020 - Presente'
-            },
-        ]
-    },
-]
-
 export const SERVICES_DATA = [
     {
         icon: <GanttChartSquare size={72} strokeWidth={0.8}/>,
@@ -125,66 +60,32 @@ export const SERVICES_DATA = [
     {
         icon: <Gem size={72} strokeWidth={0.8}/>,
         title: 'App Development',
-        description: 'Na palma da sua mão há um mundo, é um prazer expandir esse mundo.'
+        description: '"O futuro é móvel. Tudo o que podemos fazer em um computador, poderemos fazer em um dispositivo móvel." - Marc Andreessen'
     }
 ]
 
 export const PROJECTS_DATA = [
     {
-        imgPath: '/work/2.png',
-        category: [
-            'link',
-            'ui',
-            'github'
-        ],
-        tag: 'frontdev',
-        title: 'Nexa Dashboard',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-        link: '/',
-        repository: '/'
-    },
-    {
-        imgPath: '/work/1.png',
+        imgPath: '/work/excursio.png',
         category: [
             'ui',
         ],
         tag: 'ui',
-        title: 'Nexa Website',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-        link: '/',
-        repository: '/'
+        title: 'Excursio',
+        description: 'Sua plataforma fictícia de viagens projetada para proporcionar uma jornada inesquecível com praticidade e estilo!',
+        link: '',
+        repository: 'https://dribbble.com/shots/23485409-Excursio'
     },
     {
-        imgPath: '/work/3.png',
+        imgPath: '/work/stagetree.png',
         category: [
-            'github',
-            'ui'
+            'ui',
+            'link'
         ],
-        tag: 'mobile',
-        title: 'Nexa App',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-        link: '/',
-        repository: '/'
-    },
-]
-
-export const REVIEW_DATA = [
-    {
-        avatar: '/reviews/avatar-1.png',
-        name: 'Frances Farias',
-        job: 'CEO',
-        review: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.'
-    },
-    {
-        avatar: '/reviews/avatar-2.png',
-        name: 'Cassio Coach',
-        job: 'CEO',
-        review: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.'
-    },
-    {
-        avatar: '/reviews/avatar-3.png',
-        name: 'DDidico Junior',
-        job: 'CEO',
-        review: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.'
+        tag: 'frontdev',
+        title: 'StageTree',
+        description: 'Uma empresa de tecnologia que tem grandes soluções para os mais diversos problemas em TIC.',
+        link: 'https://stagetree.com.br/',
+        repository: 'https://dribbble.com/shots/23539587-StageTree'
     },
 ]

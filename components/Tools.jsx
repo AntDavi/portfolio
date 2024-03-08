@@ -1,5 +1,3 @@
-'use client'
-
 import React, { useState, useEffect } from 'react';
 import {
     Tooltip,
@@ -9,17 +7,20 @@ import {
 } from "@/components/ui/tooltip"
 
 import Image from 'next/image';
-import { SKILLS_DATA } from '@/constants';
-
+import { client } from "@/sanity/lib/client";
+import { urlForImage } from '@/sanity/lib/image';
 
 const Tools = ({ containerStyle }) => {
-
-    const getData = (arr, title) => {
-        return arr.find((item) => item.title === title)
-    } 
-
-
+    const [tools, setTools] = useState([]);
     const [activeTool, setActiveTool] = useState(null);
+
+    useEffect(() => {
+        const query = '*[_type == "tools"]';
+
+        client.fetch(query)
+            .then((data) => setTools(data))
+            .catch((error) => console.error("Erro ao buscar ferramentas:", error));
+    }, []);
 
     const handleMouseEnter = (index) => {
         setActiveTool(index);
@@ -29,27 +30,21 @@ const Tools = ({ containerStyle }) => {
         setActiveTool(null);
     };
 
-
-
     return (
         <TooltipProvider>
             <Tooltip>
                 <TooltipTrigger className={`${containerStyle}`}>
-
-                    {getData(SKILLS_DATA, 'tools').data.map((item, index) => {
-                        const {imgPath} = item;
-                        return (
-                            <div key={index}>
-                                <Image
-                                    src={imgPath}
-                                    width={48}
-                                    height={48}
-                                    alt=''
-                                    priority
-                                />
-                            </div>
-                        )
-                    })}
+                    {tools.map((tool, index) => (
+                        <div key={index} onMouseEnter={() => handleMouseEnter(index)} onMouseLeave={handleMouseLeave}>
+                            <Image
+                                src={urlForImage(tool.imgUrl)}
+                                width={48}
+                                height={48}
+                                alt={tool.title}
+                                priority
+                            />
+                        </div>
+                    ))}
                 </TooltipTrigger>
                 <TooltipContent>
                     {activeTool !== null && (

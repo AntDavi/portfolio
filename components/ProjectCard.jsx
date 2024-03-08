@@ -31,7 +31,7 @@ const ProjectCard = ({ project }) => {
 
                     <div className="flex gap-x-4">
                         {project.category.includes('link') && (
-                            <Link href={project.link} className="bg-tertiary w-[54px] h-[54px] rounded-full flex justify-center items-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-200 hover:shadow-xl dark:bg-primary">
+                            <Link href={project.link} target="_blank" className="bg-tertiary w-[54px] h-[54px] rounded-full flex justify-center items-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-200 hover:shadow-xl dark:bg-primary">
                                 <RiLink />
                             </Link>
                         )}
@@ -41,7 +41,7 @@ const ProjectCard = ({ project }) => {
                             </Link>
                         )}
                         {project.category.includes('ui') && (
-                            <Link href={project.link} target="_blank" className="bg-tertiary w-[54px] h-[54px] rounded-full flex justify-center items-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-200 hover:shadow-xl dark:bg-primary">
+                            <Link href={project.repository} target="_blank" className="bg-tertiary w-[54px] h-[54px] rounded-full flex justify-center items-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-200 hover:shadow-xl dark:bg-primary">
                                 <RiDribbbleFill />
                             </Link>
                         )}

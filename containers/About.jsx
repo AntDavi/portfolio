@@ -9,15 +9,18 @@ import {
     TabsList
 } from '@/components/ui/tabs'
 
-import { INFO_DATA, SKILLS_DATA, QUALIFICATIONS_DATA } from "@/constants"
+import { client } from "@/sanity/lib/client"
+import { urlForImage } from "@/sanity/lib/image"
+
+import { INFO_DATA } from "@/constants"
 import { Briefcase, GraduationCap } from "lucide-react"
+
 import Tools from "@/components/Tools"
+import SkillsList from "@/components/SkillsList"
+import EducationList from "@/components/EducationList"
+import ExperienceList from "@/components/ExperienceList"
 
 const About = () => {
-
-    const getData = (arr, title) => {
-        return arr.find((item) => item.title === title)
-    }
 
     return (
         <section className="xl:h-[860px] py-24">
@@ -33,7 +36,7 @@ const About = () => {
                     {/* Right */}
                     <div className="flex-1">
                         <Tabs defaultValue="personal">
-                            <TabsList className='grid max-w-[520px] mx-auto mb-24 xl:w-full xl:grid-cols-3 xl:border dark:border-none xl:mb-12'>
+                            <TabsList className='grid w-full h-full md:grid-cols-3 lg:max-w-[640px] mb-12 mx-auto md:border dark:border-none justify-center'>
                                 <TabsTrigger className='w-[162px] xl:w-auto' value='personal'>Informações</TabsTrigger>
                                 <TabsTrigger className='w-[162px] xl:w-auto' value='qualifications'>Qualificações</TabsTrigger>
                                 <TabsTrigger className='w-[162px] xl:w-auto' value='skills'>Skills</TabsTrigger>
@@ -85,28 +88,7 @@ const About = () => {
                                                 {/* List */}
                                                 <div className="flex flex-col text-left gap-y-8">
 
-                                                    {getData(QUALIFICATIONS_DATA, 'experience').data.map((item, index) => {
-                                                        const { company, qualification, years } = item;
-                                                        return (
-                                                            <div className="flex gap-x-8 group" key={index}>
-                                                                <div className="h-[84px] w-[1px] bg-border relative ml-2">
-                                                                    <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500">
-                                                                    </div>
-                                                                </div>
-                                                                <div>
-                                                                    <div className="mb-2 text-xl font-semibold leading-none">
-                                                                        {company}
-                                                                    </div>
-                                                                    <div className="mb-4 text-lg leading-none text-muted-foreground">
-                                                                        {qualification}
-                                                                    </div>
-                                                                    <div className="text-base font-medium">
-                                                                        {years}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        )
-                                                    })}
+                                                    <ExperienceList/>
 
                                                 </div>
                                             </div>
@@ -121,34 +103,11 @@ const About = () => {
                                                 {/* List */}
                                                 <div className="flex flex-col text-left gap-y-8">
 
-                                                    {getData(QUALIFICATIONS_DATA, 'education').data.map((item, index) => {
-                                                        const { university, qualification, years } = item;
-                                                        return (
-                                                            <div className="flex gap-x-8 group" key={index}>
-                                                                <div className="h-[84px] w-[1px] bg-border relative ml-2">
-                                                                    <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500">
-                                                                    </div>
-                                                                </div>
-                                                                <div>
-                                                                    <div className="mb-2 text-xl font-semibold leading-none">
-                                                                        {university}
-                                                                    </div>
-                                                                    <div className="mb-4 text-lg leading-none text-muted-foreground">
-                                                                        {qualification}
-                                                                    </div>
-                                                                    <div className="text-base font-medium">
-                                                                        {years}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        )
-                                                    })}
+                                                    <EducationList/>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
-
                                 </TabsContent>
 
 
@@ -163,14 +122,7 @@ const About = () => {
 
                                             {/* Lista de skills */}
 
-                                            {getData(SKILLS_DATA, 'skills').data.map((item, index) => {
-                                                const { name } = item;
-                                                return (
-                                                    <div className="w-2/4 mx-auto mb-1 text-center xl:text-left xl:mx-0 before:w-[10px] before:h-[10px] before:rounded-full flex justify-center xl:justify-start before:bg-primary items-center gap-x-2">
-                                                        <div className="font-medium">{name}</div>
-                                                    </div>
-                                                )
-                                            })}
+                                            <SkillsList />
 
                                         </div>
 
