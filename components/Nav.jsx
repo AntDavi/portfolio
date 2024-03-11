@@ -31,14 +31,14 @@ const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
                     </Link>
                 )
             })}
-            <Button className="">
+            {/* <Button className="">
                 <Link
                     href='/studio'
                     target='_blank'
                 >
                     Login
                 </Link>
-            </Button>
+            </Button> */}
         </nav>
     )
 }

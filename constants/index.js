@@ -63,29 +63,3 @@ export const SERVICES_DATA = [
         description: '"O futuro é móvel. Tudo o que podemos fazer em um computador, poderemos fazer em um dispositivo móvel." - Marc Andreessen'
     }
 ]
-
-export const PROJECTS_DATA = [
-    {
-        imgPath: '/work/excursio.png',
-        category: [
-            'ui',
-        ],
-        tag: 'ui',
-        title: 'Excursio',
-        description: 'Sua plataforma fictícia de viagens projetada para proporcionar uma jornada inesquecível com praticidade e estilo!',
-        link: '',
-        repository: 'https://dribbble.com/shots/23485409-Excursio'
-    },
-    {
-        imgPath: '/work/stagetree.png',
-        category: [
-            'ui',
-            'link'
-        ],
-        tag: 'frontdev',
-        title: 'StageTree',
-        description: 'Uma empresa de tecnologia que tem grandes soluções para os mais diversos problemas em TIC.',
-        link: 'https://stagetree.com.br/',
-        repository: 'https://dribbble.com/shots/23539587-StageTree'
-    },
-]

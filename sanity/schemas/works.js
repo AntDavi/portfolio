@@ -14,6 +14,19 @@ export default {
             type: 'string'
         },
         {
+            name: 'imgUrl',
+            title: 'ImgUrl',
+            type: 'image',
+            options: {
+                hotspot: true,
+            },
+        },
+        {
+            name: 'tag',
+            title: 'Tag',
+            type: 'string'
+        },
+        {
             name: 'category',
             title: 'Category',
             type: 'array',
@@ -34,14 +47,6 @@ export default {
             name: 'repository',
             title: 'Repository',
             type: 'string'
-        },
-        {
-            name: 'imgUrl',
-            title: 'ImgUrl',
-            type: 'image',
-            options: {
-                hotspot: true,
-            },
         },
     ]
 }

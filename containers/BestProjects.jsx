@@ -1,20 +1,26 @@
 'use client'
-import React, { useState, useEffect } from 'react'
 
-import Link from 'next/link'
-import { Button } from '@/components/ui/button'
-
-// swiper
-import 'swiper/css'
-import 'swiper/css/pagination'
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination } from 'swiper/modules';
+import ProjectCard from '@/components/ProjectCard';
+import { client } from "@/sanity/lib/client"; // Importe o cliente do Sanity API aqui
 
-import { Pagination } from 'swiper/modules'
-import ProjectCard from '@/components/ProjectCard'
-
-import { PROJECTS_DATA } from '@/constants'
 
 const BestProjects = () => {
+    const [projects, setProjects] = useState([]);
+
+    useEffect(() => {
+        const query = '*[_type == "works"]{title, description, imgUrl, tag, category, link, repository}';
+
+        client.fetch(query)
+            .then((data) => setProjects(data))
+            .catch((error) => console.error("Erro ao buscar projetos:", error));
+    }, []);
 
     return (
         <section className='relative py-24'>
@@ -45,19 +51,16 @@ const BestProjects = () => {
                         }}
                     >
                         {/* Show projects */}
-
-                        {PROJECTS_DATA.slice(0, 4).map((project, index) => {
-                            return (
-                                <SwiperSlide key={index}>
-                                    <ProjectCard project={project} />
-                                </SwiperSlide>
-                            )
-                        })}
+                        {projects.map((project, index) => (
+                            <SwiperSlide key={index}>
+                                <ProjectCard project={project} />
+                            </SwiperSlide>
+                        ))}
                     </Swiper>
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default BestProjects
+export default BestProjects;

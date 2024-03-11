@@ -10,6 +10,7 @@ import {
     RiLink
 } from 'react-icons/ri'
 import { Badge } from "./ui/badge"
+import { urlForImage } from '@/sanity/lib/image'
 
 
 const ProjectCard = ({ project }) => {
@@ -20,7 +21,7 @@ const ProjectCard = ({ project }) => {
                 <div className="relative w-full h-[300px] flex items-center justify-center bg-tertiary dark:bg-secondary/40 xl:bg-work_project_bg_light xl:bg-[110%] xl:dark:bg-work_project_bg_dark xl:bg-no-repeat overflow-hidden">
                     <Image
                         className="absolute bottom-0 shadow-2xl"
-                        src={project.imgPath}
+                        src={urlForImage(project.imgUrl)}
                         width={247}
                         height={250}
                         alt={project.title}
