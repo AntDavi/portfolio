@@ -24,7 +24,7 @@ const Form = () => {
             </div>
 
             <div className="relative flex items-center">
-                <Textarea type='message' id='message' placeholder='Seu nome' className='resize-none'/>
+                <Textarea type='message' id='message' placeholder='Sua mensagem' className='resize-none'/>
                 '<MessageSquare className="absolute top-2 right-6" size={20}/>
             </div>
 
