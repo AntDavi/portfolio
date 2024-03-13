@@ -21,7 +21,7 @@ const PostCard = ({ post }) => {
                         height={200}
                         priority
                         alt={post.title}
-                        className='hidden rounded-sm lg:flex max-w-[200px] max-h-[200px]'
+                        className='hidden rounded-sm lg:flex size-[200px]'
                     />
                 </CardHeader>
                 <CardContent className='w-full max-w-[700px] flex flex-col items-center lg:items-start text-center lg:text-start'>
