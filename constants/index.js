@@ -21,7 +21,7 @@ export const NAV_LINKS = [
     { path: '/', label: 'home' },
     { path: '/projects', label: 'meus projetos' },
     { path: '/contact', label: 'contato' },
-    { path: '/blog', label: 'blog' },
+    // { path: '/blog', label: 'blog' },
 ];
 
 export const SOCIAL_LINKS = [
