@@ -4,7 +4,6 @@ import review from "./schemas/review";
 import skills from "./schemas/skills";
 import tools from "./schemas/tools";
 import works from "./schemas/works";
-import post from "./schemas/post"
 
 export const schema = {
   types: [
@@ -14,6 +13,5 @@ export const schema = {
     skills,
     tools,
     works,
-    post
   ],
 }

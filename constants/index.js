@@ -5,6 +5,8 @@ import {
     RiInstagramFill
 } from 'react-icons/ri'
 
+import { FaMedium } from "react-icons/fa6";
+
 import {
     User2,
     MailIcon,
@@ -21,14 +23,14 @@ export const NAV_LINKS = [
     { path: '/', label: 'home' },
     { path: '/projects', label: 'meus projetos' },
     { path: '/contact', label: 'contato' },
-    // { path: '/blog', label: 'blog' },
 ];
 
 export const SOCIAL_LINKS = [
     { path: 'https://www.linkedin.com/in/antdavi', name: <RiLinkedinFill /> },
     { path: 'https://github.com/AntDavi', name: <RiGithubFill /> },
     { path: 'https://dribbble.com/AntDavi', name: <RiDribbbleFill /> },
-    { path: 'https://www.instagram.com/anthony.front/', name: <RiInstagramFill /> }
+    { path: 'https://www.instagram.com/anthony.front/', name: <RiInstagramFill /> },
+    { path: 'https://medium.com/@ant.davi07', name: <FaMedium  /> }
 ]
 
 export const INFO_DATA = [
