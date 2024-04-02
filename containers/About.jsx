@@ -115,7 +115,7 @@ const About = () => {
                                     <div className="text-center xl:text-left">
                                         <h3 className="mb-8 h3">O que uso diariamente</h3>
 
-                                        skills
+                                        
                                         <div className="mb-16">
                                             <h4 className="mb-2 text-xl font-semibold">Skills</h4>
                                             <div className="mb-4 border-b border-border"></div>
@@ -129,7 +129,7 @@ const About = () => {
 
                                         {/* tools */}
                                         <div>
-                                            {/* <h4 className="mb-2 text-xl font-semibold xl:text-left">Ferramentas</h4> */}
+                                            <h4 className="mb-2 text-xl font-semibold xl:text-left">Ferramentas</h4>
                                             <div className="mb-4 border-b border-border"></div>
 
                                             <div className="flex justify-center xl:justify-normal">
