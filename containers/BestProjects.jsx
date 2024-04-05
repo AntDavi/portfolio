@@ -51,7 +51,7 @@ const BestProjects = () => {
                         }}
                     >
                         {/* Show projects */}
-                        {projects.map((project, index) => (
+                        {projects.slice(0, 3).map((project, index) => (
                             <SwiperSlide key={index}>
                                 <ProjectCard project={project} />
                             </SwiperSlide>
