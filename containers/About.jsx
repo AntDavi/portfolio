@@ -130,10 +130,10 @@ const About = () => {
                                         {/* tools */}
                                         <div>
                                             <h4 className="mb-2 text-xl font-semibold xl:text-left">Ferramentas</h4>
-                                            <div className="mb-4 border-b border-border"></div>
+                                            <div className="mb-5 border-b border-border"></div>
 
                                             <div className="flex justify-center xl:justify-normal">
-                                                <Tools containerStyle='flex justify-center gap-x-8 xl:justify-start' />
+                                                <Tools containerStyle='grid grid-cols-2 gap-8 xl:flex xl:justify-center xl:gap-x-8' />
                                             </div>
                                         </div>
                                     </div>

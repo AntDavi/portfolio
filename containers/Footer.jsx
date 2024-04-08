@@ -7,11 +7,11 @@ const Footer = () => {
                 <div className="flex flex-col items-center justify-between">
                     {/* Social */}
                     <Social
-                        containerStyles='flex gap-x-6 mx-auto xl:mx-0 mb-4'
+                        containerStyles='flex gap-x-6 mx-auto xl:mx-0 mb-6'
                         iconsStyles='text-black text-[20px] dark:text-white/70 hover:text-primary dark:hover:text-primary'
                     />
 
-                    <div className="text-muted-foreground">
+                    <div className="text-muted-foreground text-center">
                         Copyright &copy; Anthony Davi. Todos os direitos reservados.
                     </div>
                 </div>
