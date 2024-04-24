@@ -25,10 +25,10 @@ const Form = () => {
 
             <div className="relative flex items-center">
                 <Textarea type='message' name='message' placeholder='Sua mensagem' className='resize-none'/>
-                '<MessageSquare className="absolute top-2 right-6" size={20}/>
+                <MessageSquare className="absolute top-2 right-6" size={20}/>
             </div>
 
-            <Button className='flex items-center max-w-[250px] gap-x-5' type="submit">
+            <Button className='flex items-center w-full gap-x-5' type="submit">
                 Vamos conversar!
                 <ArrowRightIcon size={20}/>
             </Button>

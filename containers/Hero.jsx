@@ -2,13 +2,17 @@
 
 import Link from 'next/link';
 
-
 import { TypeAnimation } from 'react-type-animation';
 
 import { Button } from '@/components/ui/button';
-import { Download, Send } from 'lucide-react';
-import { motion } from 'framer-motion';
+import Badge from '@/components/Badge';
+import Social from '@/components/Social';
+import DevImg from '@/components/DevImg';
 
+import { RevealWrapper } from 'next-reveal'
+import { motion } from 'framer-motion'
+
+import { Download, Send } from 'lucide-react';
 import {
     RiBriefcase4Fill,
     RiTeamFill,
@@ -16,9 +20,6 @@ import {
     RiArrowDownSLine
 } from 'react-icons/ri';
 
-import Badge from '@/components/Badge';
-import Social from '@/components/Social';
-import DevImg from '@/components/DevImg';
 
 const Hero = () => {
     const currentYear = new Date().getFullYear();
@@ -39,10 +40,32 @@ const Hero = () => {
                 <div className='flex items-center justify-between gap-x-8'>
 
                     {/* Social */}
-                    <Social containerStyles='hidden xl:flex flex-col gap-y-6 mx-auto xl:mx-0' iconsStyles='text-foreground text-[22px] hover:text-primary transition-all' />
+                    <RevealWrapper
+                        rotate={{ x: 12, y: 40, z: 0 }}
+                        origin='left'
+                        delay={200}
+                        duration={1000}
+                        distance='500px'
+                        reset={false}
+                        viewOffset={{ top: 25, right: 0, bottom: 10, left: 5 }}
+                    >
+                        <Social
+                            containerStyles='hidden xl:flex flex-col gap-y-6 mx-auto xl:mx-0'
+                            iconsStyles='text-foreground text-[22px] hover:text-primary transition-all'
+                        />
+                    </RevealWrapper>
 
                     {/* Left */}
-                    <div className='flex max-w-[650px] flex-col justify-center mx-auto xl:mx-8 text-center xl:text-left '>
+                    <RevealWrapper
+                        rotate={{ x: 12, y: 40, z: 0 }}
+                        origin='top'
+                        delay={200}
+                        duration={1000}
+                        distance='500px'
+                        reset={false}
+                        viewOffset={{ top: 25, right: 0, bottom: 10, left: 5 }}
+                        className='flex max-w-[650px] flex-col justify-center mx-auto xl:mx-8 text-center xl:text-left'
+                    >
                         <div className='flex items-center mb-4 gap-x-2'>
                             <div className='w-[70px] h-[1px] bg-primary'></div>
                             <TypeAnimation
@@ -98,11 +121,20 @@ const Hero = () => {
 
                         <Social containerStyles='xl:hidden flex gap-x-6 mx-auto xl:mx-0' iconsStyles='text-foreground text-[22px] hover:text-primary transition-all' />
 
-                    </div>
+                    </RevealWrapper>
 
 
                     {/* Right */}
-                    <div className='relative hidden xl:flex '>
+                    <RevealWrapper
+                        rotate={{ x: 12, y: 40, z: 0 }}
+                        origin='right'
+                        delay={200}
+                        duration={1000}
+                        distance='500px'
+                        reset={false}
+                        viewOffset={{ top: 25, right: 0, bottom: 10, left: 5 }}
+                        className='relative hidden xl:flex'
+                    >
                         {/* <Badge
                             containerStyles='absolute top-[24%] -left-[5rem]'
                             icon={<RiBriefcase4Fill />}
@@ -136,7 +168,7 @@ const Hero = () => {
                             containerStyle='bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom'
                             imgSrc='/hero/developer.png'
                         />
-                    </div>
+                    </RevealWrapper>
                 </div>
                 <div className='absolute hidden md:flex left-2/4 bottom-10 mx:bottom-12 animate-bounce z-2'>
                     <RiArrowDownSLine className='text-3xl text-primary' />

@@ -20,21 +20,54 @@ import SkillsList from "@/components/SkillsList"
 import EducationList from "@/components/EducationList"
 import ExperienceList from "@/components/ExperienceList"
 
+import { RevealWrapper } from 'next-reveal'
+
 const About = () => {
 
     return (
         <section className="xl:h-[860px] py-24">
             <div className="container mx-auto">
-                <h2 className="mx-auto mb-20 text-center section-title xl:mb-16">
-                    Sobre mim
-                </h2>
+                <RevealWrapper
+                    rotate={{ x: 12, y: 30, z: 0 }}
+                    origin='bottom'
+                    delay={200}
+                    duration={1000}
+                    distance='200px'
+                    reset={false}
+                    viewOffset={{ top: 25, right: 0, bottom: 10, left: 5 }}
+                >
+                    <h2
+                        className="mx-auto mb-20 text-center section-title xl:mb-16"
+                    >
+                        Sobre mim
+                    </h2>
+                </RevealWrapper>
+
                 <div className="flex flex-col xl:flex-row">
                     {/* Left */}
-                    <div className="relative flex-1 hidden xl:flex ">
+                    <RevealWrapper
+                        rotate={{ x: 12, y: 40, z: 0 }}
+                        origin='left'
+                        delay={200}
+                        duration={1000}
+                        distance='500px'
+                        reset={false}
+                        viewOffset={{ top: 25, right: 0, bottom: 10, left: 5 }}
+                        className="relative flex-1 hidden xl:flex "
+                    >
                         <DevImg containerStyle='bg-about_shape_light dark:bg-about_shape_dark w-[505px] h-[505px] bg-no-repeat relative' imgSrc='/about/developer.png' />
-                    </div>
+                    </RevealWrapper>
                     {/* Right */}
-                    <div className="flex-1">
+                    <RevealWrapper
+                        rotate={{ x: 12, y: 40, z: 0 }}
+                        origin='right'
+                        delay={200}
+                        duration={1000}
+                        distance='500px'
+                        reset={false}
+                        viewOffset={{ top: 25, right: 0, bottom: 10, left: 5 }}
+                        className="flex-1"
+                    >
                         <Tabs defaultValue="personal">
                             <TabsList className='grid w-full h-full md:grid-cols-3 lg:max-w-[640px] mb-12 mx-auto md:border dark:border-none justify-center'>
                                 <TabsTrigger className='w-[162px] xl:w-auto' value='personal'>Informações</TabsTrigger>
@@ -88,7 +121,7 @@ const About = () => {
                                                 {/* List */}
                                                 <div className="flex flex-col text-left gap-y-8">
 
-                                                    <ExperienceList/>
+                                                    <ExperienceList />
 
                                                 </div>
                                             </div>
@@ -103,7 +136,7 @@ const About = () => {
                                                 {/* List */}
                                                 <div className="flex flex-col text-left gap-y-8">
 
-                                                    <EducationList/>
+                                                    <EducationList />
                                                 </div>
                                             </div>
                                         </div>
@@ -115,7 +148,7 @@ const About = () => {
                                     <div className="text-center xl:text-left">
                                         <h3 className="mb-8 h3">O que uso diariamente</h3>
 
-                                        
+
                                         <div className="mb-16">
                                             <h4 className="mb-2 text-xl font-semibold">Skills</h4>
                                             <div className="mb-4 border-b border-border"></div>
@@ -124,8 +157,8 @@ const About = () => {
 
                                             <SkillsList />
 
-                                        </div> 
-                                    
+                                        </div>
+
 
                                         {/* tools */}
                                         <div>
@@ -140,7 +173,7 @@ const About = () => {
                                 </TabsContent>
                             </div>
                         </Tabs>
-                    </div>
+                    </RevealWrapper>
                 </div>
             </div>
         </section>
