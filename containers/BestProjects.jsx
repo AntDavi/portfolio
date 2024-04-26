@@ -26,23 +26,24 @@ const BestProjects = () => {
 
     return (
         <section className='relative py-24'>
-            <RevealWrapper 
-                rotate={{ x: 12, y: 30, z: 0 }}
-                origin='left'
-                delay={200}
-                duration={1000}
-                distance='200px'
-                reset={false}
-                viewOffset={{ top: 25, right: 0, bottom: 10, left: 5 }} className='container mx-auto'>
+            <div
+                className='container mx-auto'>
                 {/* left */}
-                <div
+                <RevealWrapper
+                    rotate={{ x: 12, y: 30, z: 0 }}
+                    origin='left'
+                    delay={200}
+                    duration={1000}
+                    distance='200px'
+                    reset={false}
+                    viewOffset={{ top: 25, right: 0, bottom: 10, left: 5 }}
                     className='max-w-[400px] mx-auto xl:mx-0 text-center xl:text-left mb-12 xl:h-[400px] flex flex-col justify-center items-center xl:items-start'>
                     <h2 className='mb-4 section-title'>Alguns Projetos</h2>
                     <p className='mb-8 subtitle'>Alguns dos projetos que julgo serem os melhores que já produzi.</p>
                     <Link href='/projects'>
                         <Button>Ver todos</Button>
                     </Link>
-                </div>
+                </RevealWrapper>
 
                 {/* right */}
                 <div
@@ -70,7 +71,7 @@ const BestProjects = () => {
                         ))}
                     </Swiper>
                 </div>
-            </RevealWrapper>
+            </div>
         </section>
     );
 };

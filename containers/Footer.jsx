@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="container mx-auto">
                 <RevealWrapper
                     // rotate={{ x: 12, y: 30, z: 0 }}
-                    origin='bottom'
+                    origin='left'
                     delay={200}
                     duration={1000}
                     distance='200px'
