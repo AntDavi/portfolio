@@ -48,9 +48,9 @@ const About = () => {
                     <RevealWrapper
                         rotate={{ x: 12, y: 40, z: 0 }}
                         origin='left'
-                        delay={200}
+                        delay={100}
                         duration={1000}
-                        distance='500px'
+                        distance='200px'
                         reset={false}
                         viewOffset={{ top: 25, right: 0, bottom: 10, left: 5 }}
                         className="relative flex-1 hidden xl:flex "
@@ -60,10 +60,10 @@ const About = () => {
                     {/* Right */}
                     <RevealWrapper
                         rotate={{ x: 12, y: 40, z: 0 }}
-                        origin='right'
+                        origin='bottom'
                         delay={200}
                         duration={1000}
-                        distance='500px'
+                        distance='100px'
                         reset={false}
                         viewOffset={{ top: 25, right: 0, bottom: 10, left: 5 }}
                         className="flex-1"
